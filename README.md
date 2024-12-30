@@ -15,7 +15,7 @@ add `safe_migrations` to `INSTALLED_APPS` in settings.py of your django project.
 ## Usage
 
 ```bash
-python manage.py safe_migration --hash GIT_COMMIT_HASH --git GIT_DIRECTORY
+python manage.py safe_migrations --hash GIT_COMMIT_HASH --git GIT_DIRECTORY
 ```
 
 ## Features
