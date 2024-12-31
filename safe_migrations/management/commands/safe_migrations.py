@@ -76,7 +76,7 @@ class Command(BaseCommand):
 
     def prepare_migrations_folder(self):
         self.stdout.write("Cleaning migrations folders...")
-        apps = [app for app in settings.INSTALLED_APPS if not app.startswith("django.")]
+        apps = [app.split(".")[0] for app in settings.INSTALLED_APPS if not app.startswith("django.")]
         for app_dir in Path.cwd().iterdir():
             if app_dir.name in apps:
                 migrations_dir = app_dir / "migrations"
